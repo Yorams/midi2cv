@@ -47,6 +47,7 @@ void setup()
  digitalWrite(CLOCK,LOW);
  digitalWrite(DAC1,HIGH);
  digitalWrite(DAC2,HIGH);
+ 
 
  SPI.begin();
 
@@ -126,7 +127,7 @@ void loop()
 
         // Pitch bend output from 0 to 1023 mV.  Left shift d2 by 4 to scale from 0 to 2047.
         // With DAC gain = 1X, this will yield a range from 0 to 1023 mV.  
-        setVoltage(DAC2, 0, 0, d2<<4);  // DAC2, channel 0, gain = 1X
+        //setVoltage(DAC2, 0, 0, d2<<4);  // DAC2, channel 0, gain = 1X
         
         break;
 
@@ -136,7 +137,14 @@ void loop()
 
         // CC range from 0 to 4095 mV  Left shift d2 by 5 to scale from 0 to 4095, 
         // and choose gain = 2X
-        setVoltage(DAC2, 1, 1, d2<<5);  // DAC2, channel 1, gain = 2X
+        
+        if(d1 == 1){
+          setVoltage(DAC2, 1, 1, d2<<5);  // DAC2, channel 1, gain = 2X
+        }
+        if(d1 == 2){
+          setVoltage(DAC2, 0, 1, d2<<5);  // DAC2, channel 0, gain = 1X
+        }
+        
         break;
         
       case midi::Clock:
