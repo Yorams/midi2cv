@@ -1,8 +1,8 @@
 # midi2cv
 
-<img src="/images/IMG_0776.JPG" alt="midi2cv" width="400"> <img src="/images/IMG_0777.JPG" alt="midi2cv" width="400">
+<img src="/images/midi2cv_front.jpg" alt="midi2cv" width="400"> <img src="/images/midi2cv_side.JPEG" alt="midi2cv" width="400">
 
-This repository contains the code and schematic for a DIY MIDI to CV converter.  I installed this converter into a home-built analog synthesizer, allowing me to play the synthesizer with my Yamaha CP50 keyboard over MIDI.
+I forked this repository from elkayem, original found here: https://github.com/elkayem/midi2cv. I wanted to make an PCB from this schematic and needed to ajust a couple parts to match the right footprint on the PCB. 
 
 The MIDI to CV converter includes the following outputs:
 
@@ -23,9 +23,10 @@ The MIDI to CV converter includes the following outputs:
 * Diode (e.g., 1N917)
 * 220, 500, 3x1K, 7.7K (3K+4.7K), 10K Ohm resistors
 * 3x 0.1 uF ceramic capacitors
-* 5 pin MIDI jack
-* 7x 4mm banana plug jacks
+* 3,5mm jack panel mount for MIDI over TRS
+* 7x 3,5mm jack PCB mount Horizontal (farnell code: 2518188)
 * 3-pin header and jumper *or* 3-way switch
+* 3-pin header to connect MIDI-In
 
 The Arduino code uses the standard MIDI and SPI libraries, which can be found in the Arduino Library Manager. 
 
