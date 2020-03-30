@@ -8,9 +8,8 @@ The MIDI to CV converter includes the following outputs:
 
 * Note CV output (88 keys, 1V/octave) using a 12-bit DAC
 * Note priority (highest note, lowest note, or last note) selectable with jumper or 3-way switch
-* Pitch bend CV output (0.5 +/-0.5V)
 * Velocity CV output (0 to 4V)
-* Control Change CV outout (0 to 4V)
+* 2x Control Change CV outout (0 to 4V) (i changed the pitch bend to CC2 for 2 control channels)
 * Trigger output (5V, 20 msec pulse for each new key played)
 * Gate output (5V when any key depressed)
 * Clock output (1 clock per quarter note, 20 msec 5V pulses)
